@@ -6,6 +6,7 @@
       <File FileName="maxim_11311/MainWindow.cs" Line="89" Column="6" />
       <File FileName="maxim_11311/MAX11311.cs" Line="126" Column="9" />
       <File FileName="maxim_11311/MAX11311_Const.cs" Line="3" Column="22" />
+      
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
