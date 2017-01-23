@@ -90,5 +90,10 @@ namespace maxim_11311
 			mxm.WriteRegister( spbWriteReg.ValueAsInt, spbWriteVal.ValueAsInt );
 		
 		}
+
+		protected void OnRbnAdcSpeedActivated (object sender, EventArgs e)
+		{
+			throw new NotImplementedException ();
+		}
 	}
 }

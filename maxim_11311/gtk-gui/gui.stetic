@@ -564,6 +564,7 @@ res
                                                         <property name="HasLabel">True</property>
                                                         <property name="UseUnderline">True</property>
                                                         <property name="Group">grpADCSpeed</property>
+                                                        <signal name="Activated" handler="OnRbnAdcSpeedActivated" />
                                                       </widget>
                                                       <packing>
                                                         <property name="Position">0</property>
@@ -581,6 +582,7 @@ res
                                                         <property name="HasLabel">True</property>
                                                         <property name="UseUnderline">True</property>
                                                         <property name="Group">grpADCSpeed</property>
+                                                        <signal name="Activated" handler="OnRbnAdcSpeedActivated" />
                                                       </widget>
                                                       <packing>
                                                         <property name="Position">1</property>
@@ -602,6 +604,7 @@ res
                                                             <property name="HasLabel">True</property>
                                                             <property name="UseUnderline">True</property>
                                                             <property name="Group">grpADCSpeed</property>
+                                                            <signal name="Activated" handler="OnRbnAdcSpeedActivated" />
                                                           </widget>
                                                           <packing>
                                                             <property name="Position">0</property>
@@ -619,6 +622,7 @@ res
                                                             <property name="HasLabel">True</property>
                                                             <property name="UseUnderline">True</property>
                                                             <property name="Group">grpADCSpeed</property>
+                                                            <signal name="Activated" handler="OnRbnAdcSpeedActivated" />
                                                           </widget>
                                                           <packing>
                                                             <property name="Position">1</property>
