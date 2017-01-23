@@ -3,10 +3,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="maxim_11311/MainWindow.cs">
     <Files>
       <File FileName="maxim_11311/Program.cs" Line="1" Column="1" />
-      <File FileName="maxim_11311/MainWindow.cs" Line="89" Column="6" />
-      <File FileName="maxim_11311/MAX11311.cs" Line="126" Column="9" />
-      <File FileName="maxim_11311/MAX11311_Const.cs" Line="3" Column="22" />
-      
+      <File FileName="maxim_11311/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="maxim_11311/MAX11311.cs" Line="1" Column="1" />
+      <File FileName="maxim_11311/MAX11311_Const.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
