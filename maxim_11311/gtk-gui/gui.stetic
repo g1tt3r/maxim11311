@@ -8,7 +8,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/maxim_11311.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="maxim_11311.MainWindow" design-size="636 594">
+  <widget class="Gtk.Window" id="maxim_11311.MainWindow" design-size="768 610">
     <action-group name="Default" />
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
@@ -89,7 +89,7 @@
                   <widget class="Gtk.Notebook" id="notebook2">
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
-                    <property name="CurrentPage">1</property>
+                    <property name="CurrentPage">0</property>
                     <child>
                       <widget class="Gtk.Frame" id="frame4">
                         <property name="MemberName" />
@@ -125,57 +125,14 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <widget class="Gtk.ComboBox" id="cmbPortMode">
-                                            <property name="MemberName" />
-                                            <property name="IsTextCombo">True</property>
-                                            <property name="Items" translatable="yes">High impedance
-Digital input, GPI
-Level translator
-Register output, GPO
-Path output, GPO
-DAC output
-DAC out, ADC-monitored
-Single ended ADC
-Differential ADC +
-Differential ADC -
-Pseudo differential
-Analog switch GPI
-Analog switch Register
-
-
-</property>
-                                            <property name="Active">12</property>
-                                          </widget>
-                                          <packing>
-                                            <property name="Position">1</property>
-                                            <property name="AutoSize">True</property>
-                                            <property name="Expand">False</property>
-                                            <property name="Fill">False</property>
-                                          </packing>
+                                          <placeholder />
                                         </child>
                                         <child>
                                           <widget class="Gtk.HBox" id="hbox9">
                                             <property name="MemberName" />
                                             <property name="Spacing">6</property>
                                             <child>
-                                              <widget class="Gtk.ComboBox" id="cmbPortRange">
-                                                <property name="MemberName" />
-                                                <property name="IsTextCombo">True</property>
-                                                <property name="Items" translatable="yes">none
-0 .. +10 V
--5 .. +5 V
--10 .. 0 V
-0 .. +2.5 V
-res
-0 .. +2.5 V</property>
-                                                <property name="Active">0</property>
-                                              </widget>
-                                              <packing>
-                                                <property name="Position">0</property>
-                                                <property name="AutoSize">True</property>
-                                                <property name="Expand">False</property>
-                                                <property name="Fill">False</property>
-                                              </packing>
+                                              <placeholder />
                                             </child>
                                             <child>
                                               <placeholder />
@@ -214,57 +171,14 @@ res
                                           </packing>
                                         </child>
                                         <child>
-                                          <widget class="Gtk.ComboBox" id="cmbPortMode1">
-                                            <property name="MemberName" />
-                                            <property name="IsTextCombo">True</property>
-                                            <property name="Items" translatable="yes">High impedance
-Digital input, GPI
-Level translator
-Register output, GPO
-Path output, GPO
-DAC output
-DAC out, ADC-monitored
-Single ended ADC
-Differential ADC +
-Differential ADC -
-Pseudo differential
-Analog switch GPI
-Analog switch Register
-
-
-</property>
-                                            <property name="Active">12</property>
-                                          </widget>
-                                          <packing>
-                                            <property name="Position">1</property>
-                                            <property name="AutoSize">True</property>
-                                            <property name="Expand">False</property>
-                                            <property name="Fill">False</property>
-                                          </packing>
+                                          <placeholder />
                                         </child>
                                         <child>
                                           <widget class="Gtk.HBox" id="hbox10">
                                             <property name="MemberName" />
                                             <property name="Spacing">6</property>
                                             <child>
-                                              <widget class="Gtk.ComboBox" id="cmbPortRange1">
-                                                <property name="MemberName" />
-                                                <property name="IsTextCombo">True</property>
-                                                <property name="Items" translatable="yes">none
-0 .. +10 V
--5 .. +5 V
--10 .. 0 V
-0 .. +2.5 V
-res
-0 .. +2.5 V</property>
-                                                <property name="Active">0</property>
-                                              </widget>
-                                              <packing>
-                                                <property name="Position">0</property>
-                                                <property name="AutoSize">True</property>
-                                                <property name="Expand">False</property>
-                                                <property name="Fill">False</property>
-                                              </packing>
+                                              <placeholder />
                                             </child>
                                             <child>
                                               <placeholder />
@@ -287,12 +201,373 @@ res
                                       </packing>
                                     </child>
                                     <child>
-                                      <placeholder />
+                                      <widget class="Gtk.Frame" id="frame5">
+                                        <property name="MemberName" />
+                                        <child>
+                                          <widget class="Gtk.Table" id="tblPortConf">
+                                            <property name="MemberName" />
+                                            <property name="NRows">2</property>
+                                            <property name="NColumns">7</property>
+                                            <property name="RowSpacing">6</property>
+                                            <property name="ColumnSpacing">6</property>
+                                            <property name="BorderWidth">2</property>
+                                            <child>
+                                              <placeholder />
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.Button" id="btnPortConfApply">
+                                                <property name="MemberName" />
+                                                <property name="CanFocus">True</property>
+                                                <property name="Type">TextOnly</property>
+                                                <property name="Label" translatable="yes">Apply</property>
+                                                <property name="UseUnderline">True</property>
+                                                <signal name="Clicked" handler="OnBtnPortConfApplyClicked" />
+                                              </widget>
+                                              <packing>
+                                                <property name="TopAttach">1</property>
+                                                <property name="BottomAttach">2</property>
+                                                <property name="LeftAttach">6</property>
+                                                <property name="RightAttach">7</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.CheckButton" id="cbxPortConfInvert">
+                                                <property name="MemberName" />
+                                                <property name="CanFocus">True</property>
+                                                <property name="Label" translatable="yes">Invert</property>
+                                                <property name="DrawIndicator">True</property>
+                                                <property name="HasLabel">True</property>
+                                                <property name="UseUnderline">True</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="TopAttach">1</property>
+                                                <property name="BottomAttach">2</property>
+                                                <property name="LeftAttach">3</property>
+                                                <property name="RightAttach">4</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.ComboBox" id="cmbPortConfAssoc">
+                                                <property name="MemberName" />
+                                                <property name="IsTextCombo">True</property>
+                                                <property name="Items" translatable="yes">0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</property>
+                                                <property name="Active">0</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="TopAttach">1</property>
+                                                <property name="BottomAttach">2</property>
+                                                <property name="LeftAttach">5</property>
+                                                <property name="RightAttach">6</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.ComboBox" id="cmbPortConfNSamples">
+                                                <property name="MemberName" />
+                                                <property name="IsTextCombo">True</property>
+                                                <property name="Items" translatable="yes">1
+2
+4
+8
+16
+32
+64
+128</property>
+                                                <property name="Active">0</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="TopAttach">1</property>
+                                                <property name="BottomAttach">2</property>
+                                                <property name="LeftAttach">4</property>
+                                                <property name="RightAttach">5</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.ComboBox" id="cmbPortMode">
+                                                <property name="MemberName" />
+                                                <property name="IsTextCombo">True</property>
+                                                <property name="Items" translatable="yes">High impedance
+Digital input, GPI
+Level translator
+Register output, GPO
+Path output, GPO
+DAC output
+DAC out, ADC-monitored
+Single ended ADC
+Differential ADC +
+Differential ADC -
+Pseudo differential
+Analog switch GPI
+Analog switch Register
+
+
+</property>
+                                                <property name="Active">12</property>
+                                                <signal name="Changed" handler="OnCmbPortModeChanged" />
+                                              </widget>
+                                              <packing>
+                                                <property name="TopAttach">1</property>
+                                                <property name="BottomAttach">2</property>
+                                                <property name="LeftAttach">1</property>
+                                                <property name="RightAttach">2</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.ComboBox" id="cmbPortNumber">
+                                                <property name="MemberName" />
+                                                <property name="IsTextCombo">True</property>
+                                                <property name="Items" translatable="yes">0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</property>
+                                                <property name="Active">0</property>
+                                                <signal name="Changed" handler="OnCmbPortNumberChanged" after="yes" />
+                                              </widget>
+                                              <packing>
+                                                <property name="TopAttach">1</property>
+                                                <property name="BottomAttach">2</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.ComboBox" id="cmbPortRange">
+                                                <property name="MemberName" />
+                                                <property name="IsTextCombo">True</property>
+                                                <property name="Items" translatable="yes">none
+0 .. +10 V
+-5 .. +5 V
+-10 .. 0 V
+0 .. +2.5 V
+res
+0 .. +2.5 V</property>
+                                                <property name="Active">0</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="TopAttach">1</property>
+                                                <property name="BottomAttach">2</property>
+                                                <property name="LeftAttach">2</property>
+                                                <property name="RightAttach">3</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.Label" id="lblPortConfAssocPort">
+                                                <property name="MemberName" />
+                                                <property name="LabelProp" translatable="yes">Ass.port</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="LeftAttach">5</property>
+                                                <property name="RightAttach">6</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.Label" id="lblPortConfInvert">
+                                                <property name="MemberName" />
+                                                <property name="LabelProp" translatable="yes">Invert</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="LeftAttach">3</property>
+                                                <property name="RightAttach">4</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.Label" id="lblPortConfMode">
+                                                <property name="MemberName" />
+                                                <property name="LabelProp" translatable="yes">Configuration</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="LeftAttach">1</property>
+                                                <property name="RightAttach">2</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.Label" id="lblPortConfNSamples">
+                                                <property name="MemberName" />
+                                                <property name="LabelProp" translatable="yes">#Samples</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="LeftAttach">4</property>
+                                                <property name="RightAttach">5</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.Label" id="lblPortConfNumber">
+                                                <property name="MemberName" />
+                                                <property name="Ypad">5</property>
+                                                <property name="LabelProp" translatable="yes">Port number</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <widget class="Gtk.Label" id="lblPortConfRange">
+                                                <property name="MemberName" />
+                                                <property name="LabelProp" translatable="yes">Range</property>
+                                              </widget>
+                                              <packing>
+                                                <property name="LeftAttach">2</property>
+                                                <property name="RightAttach">3</property>
+                                                <property name="AutoSize">True</property>
+                                                <property name="XOptions">Fill</property>
+                                                <property name="YOptions">Fill</property>
+                                                <property name="XExpand">False</property>
+                                                <property name="XFill">True</property>
+                                                <property name="XShrink">False</property>
+                                                <property name="YExpand">False</property>
+                                                <property name="YFill">True</property>
+                                                <property name="YShrink">False</property>
+                                              </packing>
+                                            </child>
+                                          </widget>
+                                        </child>
+                                        <child>
+                                          <widget class="Gtk.Label" id="frmPortConfig">
+                                            <property name="MemberName" />
+                                            <property name="LabelProp" translatable="yes">&lt;b&gt;Port configuration&lt;/b&gt;</property>
+                                            <property name="UseMarkup">True</property>
+                                          </widget>
+                                          <packing>
+                                            <property name="type">label_item</property>
+                                          </packing>
+                                        </child>
+                                      </widget>
+                                      <packing>
+                                        <property name="Position">2</property>
+                                        <property name="AutoSize">True</property>
+                                        <property name="Expand">False</property>
+                                        <property name="Fill">False</property>
+                                      </packing>
                                     </child>
                                   </widget>
                                   <packing>
                                     <property name="Position">0</property>
                                     <property name="AutoSize">True</property>
+                                    <property name="Expand">False</property>
+                                    <property name="Fill">False</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -678,7 +953,7 @@ res
                               </widget>
                             </child>
                             <child>
-                              <widget class="Gtk.Label" id="GtkLabel4">
+                              <widget class="Gtk.Label" id="GtkLabel11">
                                 <property name="MemberName" />
                                 <property name="LabelProp" translatable="yes">&lt;b&gt;ADC settings&lt;/b&gt;</property>
                                 <property name="UseMarkup">True</property>

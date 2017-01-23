@@ -4,11 +4,46 @@ namespace maxim_11311
 {
 	public partial class MAXIM11311
 	{
+		public struct TPortConfig {
+			public int PortMode;
+			public int Invert_AVR;
+			public int RangeMode;
+			public int NumSamples;
+			public int PortAssoc;
+
+			public TPortConfig( int p1 )
+			{
+				PortMode = p1;
+				Invert_AVR = 0;
+				RangeMode = 0;
+				NumSamples = 0;
+				PortAssoc = 0;
+			}
+		}
+
+		//public const int[] Ports = new( -1, -1, 0, 1, 2, 3, 4, 5, -1, -1, -1, 6, 7, 8, 9, 10, 11 );
+		//public const int[] Assocs = { 2, 3, 4, 5, 6, 7, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10 };
+
 		// Failure codes
 		public const int ERRCMD_ERR = -1;
 		public const int ERRCMD_LEN = -2;
 		public const int ERRCMD_SEND = -3;
 		public const int ERRCMD_CONVERT = -4;
+
+
+		public const byte PINMODE_0_HIGHZ = 0;
+		public const byte PINMODE_1_GPI   = 1;
+		public const byte PINMODE_2_LVTR  = 2;
+		public const byte PINMODE_3_GPO  = 3;
+		public const byte PINMODE_4_UNILVTR  = 4;
+		public const byte PINMODE_5_DAC  = 5;
+		public const byte PINMODE_6_DACwADC  = 6;
+		public const byte PINMODE_7_ADC  = 7;
+		public const byte  PINMODE_8_DIFFADCP  = 8;
+		public const byte PINMODE_9_DIFFADCN  = 9;
+		public const byte PINMODE_10_DACNAIN  = 10;
+		public const byte PINMODE_11_ANSW = 11;
+		public const byte PINMODE_12_AIAO = 12;
 
 		#region MAX11300 device driver (SPI interface)
 
@@ -34,7 +69,7 @@ namespace maxim_11311
 		/* GPI data for PIXI ports 19 to 16                     R               */    public const byte MAX11300_GPI_DATA_19_TO_16          = 0x0c;
 		/* GPO data for PIXI ports 15 to 0                      R/W             */    public const byte MAX11300_GPO_DATA_15_TO_0           = 0x0d;
 		/* GPO data for PIXI ports 19 to 16                     R/W             */    public const byte MAX11300_GPO_DATA_19_TO_16          = 0x0e;
-		/*                                                                      */    //                                                   = 0x0f;
+		/*                                                               PIXI       */    //                                                   = 0x0f;
 		/* Device main control register                         R/W             */    public const byte MAX11300_DEVICE_CONTROL             = 0x10;
 		/* Interrupt mask register                              R/W             */    public const byte MAX11300_INTERRUPT_MASK             = 0x11;
 		/* GPI port 0 to 7 mode register                        R/W             */    public const byte MAX11300_GPI_IRQMODE_7_TO_0         = 0x12;
@@ -51,6 +86,23 @@ namespace maxim_11311
 		/* 2nd external temperature monitor high threshold      R/W             */    public const byte MAX11300_TMP_MON_EXT2_HI_THRESH     = 0x1d;
 		/* 2nd external temperature monitor low threshold       R/W             */    public const byte MAX11300_TMP_MON_EXT2_LO_THRESH     = 0x1e;
 		/*                                                                      */    //                                                   = 0x1f;
+
+		/* Configuration register for CONF port 0               R/W             */    public const byte MAX11311_PORT_CFG_00                = 0x22;
+		/* Configuration register for CONF port 1               R/W             */    public const byte MAX11311_PORT_CFG_01                = 0x23;
+		/* Configuration register for CONF port 2               R/W             */    public const byte MAX11311_PORT_CFG_02                = 0x24;
+		/* Configuration register for CONF port 3               R/W             */    public const byte MAX11311_PORT_CFG_03                = 0x25;
+		/* Configuration register for CONF port 4               R/W             */    public const byte MAX11311_PORT_CFG_04                = 0x26;
+		/* Configuration register for CONF port 5               R/W             */    public const byte MAX11311_PORT_CFG_05                = 0x27;
+
+		/* Configuration register for CONF port 6               R/W             */    public const byte MAX11311_PORT_CFG_06                = 0x2b;
+		/* Configuration register for CONF port 7               R/W             */    public const byte MAX11311_PORT_CFG_07                = 0x2c;
+		/* Configuration register for CONF port 8               R/W             */    public const byte MAX11311_PORT_CFG_08                = 0x2d;
+		/* Configuration register for CONF port 9               R/W             */    public const byte MAX11311_PORT_CFG_09                = 0x2e;
+		/* Configuration register for CONF port 10              R/W             */    public const byte MAX11311_PORT_CFG_10                = 0x2f;
+		/* Configuration register for CONF port 11              R/W             */    public const byte MAX11311_PORT_CFG_11                = 0x30;
+
+	
+
 		/* Configuration register for PIXI port 0               R/W             */    public const byte MAX11300_PORT_CFG_00                = 0x20;
 		/* Configuration register for PIXI port 1               R/W             */    public const byte MAX11300_PORT_CFG_01                = 0x21;
 		/* Configuration register for PIXI port 2               R/W             */    public const byte MAX11300_PORT_CFG_02                = 0x22;
@@ -147,6 +199,24 @@ namespace maxim_11311
 		/*                                                                      */    //                                                   = 0x7d;
 		/*                                                                      */    //                                                   = 0x7e;
 		/*                                                                      */    //                                                   = 0x7f;
+
+		/*
+		public const byte PINMODE_0_HIGHZ = 0;
+		public const byte PINMODE_1_GPI   = 1;
+		public const byte PINMODE_2_LVTR  = 2;
+		public const byte PINMODE_3_GPO  = 3;
+		public const byte PINMODE_4_UNILVTR  = 4;
+		public const byte PINMODE_5_DAC  = 5;
+		public const byte PINMODE_6_DACwADC  = 6;
+		public const byte PINMODE_7_ADC  = 7;
+		public const byte  PINMODE_8_DIFFADCP  = 8;
+		public const byte PINMODE_9_DIFFADCN  = 9;
+		public const byte PINMODE_10_DACNAIN  = 10;
+		public const byte PINMODE_11_ANSW = 11;
+		public const byte PINMODE_12_AIAO = 12;
+
+		*/
+
 
 		#endregion
 	}

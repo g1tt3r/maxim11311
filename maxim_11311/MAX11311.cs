@@ -5,11 +5,15 @@ using System.IO.Ports;
 
 namespace maxim_11311
 {
+
+
+
 	public partial class MAXIM11311
 	{
+		
+
+
 		private SerialPort mxSerial;
-
-
 
 		public MAXIM11311 (string port, int baudrate)
 		{
@@ -70,6 +74,28 @@ namespace maxim_11311
 			mxSerial.Write(Data);
 			return true;
 		}
+
+		private	int AssociateToPortNum( int assoc )
+		{
+			int[] Ports = new int[]{ -1, -1, 0, 1, 2, 3, 4, 5, -1, -1, -1, 6, 7, 8, 9, 10, 11 };
+			if (assoc < 0) 
+				return -1;
+			if (assoc > 0x10)
+				return -1;
+			return Ports [assoc];
+		}
+
+		private	int PortNumToAssociate( int pnum )
+		{
+			int[] Assocs = new int[] { 2, 3, 4, 5, 6, 7, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10 };
+			if (pnum < 0) 
+				return -1;
+			if (pnum > 11)
+				return -1;
+			return Assocs [pnum];
+		}
+
+
 
 		public string SendCommandWithAnswer( string cmd) {
 			if (SendSerialData (cmd + "\n\r")) 
@@ -175,6 +201,132 @@ namespace maxim_11311
 			}
 			else return ERRCMD_SEND; 
 
+		}
+
+		public bool ReadPortConfig( int portnr, ref TPortConfig portcfg  ) {
+
+			int addr = 0;
+			int portreg = 0;
+			switch( portnr ) {
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5:
+					addr = MAX11311_PORT_CFG_00 + portnr;
+					break;
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 10:
+				case 11:
+					addr = MAX11311_PORT_CFG_06 + portnr;
+					break;
+				default :
+					return false;
+			}
+
+			portreg = ReadRegister (addr);
+			int funcid = portreg >> 12;
+			int funcprm = portreg & 0xfff;
+
+			if (funcid < 0)
+				return false;
+			if (funcid > 12)
+				return false;
+			portcfg.PortMode = funcid;
+			portcfg.Invert_AVR = 0;
+			portcfg.RangeMode = 0;
+			portcfg.NumSamples = 0;
+			portcfg.PortAssoc = 0;
+
+			switch (funcid) {
+				case PINMODE_0_HIGHZ:
+				case PINMODE_1_GPI:
+				case PINMODE_2_LVTR:
+				case PINMODE_3_GPO:
+				case PINMODE_12_AIAO:
+					return true;
+
+				case PINMODE_4_UNILVTR:
+				case PINMODE_11_ANSW:
+					portcfg.Invert_AVR = (funcprm & 0x0800) >> 11;
+					portcfg.PortAssoc = AssociateToPortNum( funcprm & 0x001f );
+					return true;
+
+				case PINMODE_5_DAC:
+					portcfg.RangeMode = (funcprm & 0x0700) >> 8;
+					return true;
+
+				case PINMODE_6_DACwADC:
+					portcfg.Invert_AVR = (funcprm & 0x0800) >> 11;
+					portcfg.RangeMode = (funcprm & 0x0700) >> 8;
+					return true;
+						
+				case PINMODE_7_ADC:
+					portcfg.RangeMode = (funcprm & 0x0700) >> 8;
+					portcfg.NumSamples = (funcprm & 0x00e0) >> 5;
+					return true;
+
+				case PINMODE_8_DIFFADCP:
+					portcfg.RangeMode = (funcprm & 0x0700) >> 8;
+					portcfg.NumSamples = (funcprm & 0x00e0) >> 5;
+					portcfg.PortAssoc = AssociateToPortNum( funcprm & 0x001f );
+					return true;
+
+				case PINMODE_9_DIFFADCN:
+					portcfg.RangeMode = (funcprm & 0x0700) >> 8;
+					return true;
+					
+				case PINMODE_10_DACNAIN:
+					portcfg.RangeMode = (funcprm & 0x0700) >> 8;
+					return true;
+
+				default :
+					return false;
+				
+			}
+		}
+
+		public bool WritePortConfig( int portnr, TPortConfig portcfg  ) {
+
+			int addr = 0;
+			switch( portnr ) {
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+				addr = MAX11311_PORT_CFG_00 + portnr;
+				break;
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+				addr = MAX11311_PORT_CFG_06 + portnr;
+				break;
+			default :
+				return false;
+			}
+
+			//portreg = ReadRegister (addr);
+
+			int portreg = (portcfg.PortMode << 12) 
+				| ( portcfg.Invert_AVR << 11) 
+				| ( portcfg.RangeMode << 8 )
+				| ( portcfg.NumSamples << 5)
+				| PortNumToAssociate( portcfg.PortAssoc );
+
+			if( WriteRegister( addr, portreg ) >= 0 )
+				return true;
+			
+			
+			return false;
 		}
 
 

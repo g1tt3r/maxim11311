@@ -34,21 +34,45 @@ namespace maxim_11311
 		
 		private global::Gtk.Label lblP;
 		
-		private global::Gtk.ComboBox cmbPortMode;
-		
 		private global::Gtk.HBox hbox9;
-		
-		private global::Gtk.ComboBox cmbPortRange;
 		
 		private global::Gtk.HBox hbox6;
 		
 		private global::Gtk.Label lblP1;
 		
-		private global::Gtk.ComboBox cmbPortMode1;
-		
 		private global::Gtk.HBox hbox10;
 		
-		private global::Gtk.ComboBox cmbPortRange1;
+		private global::Gtk.Frame frame5;
+		
+		private global::Gtk.Table tblPortConf;
+		
+		private global::Gtk.Button btnPortConfApply;
+		
+		private global::Gtk.CheckButton cbxPortConfInvert;
+		
+		private global::Gtk.ComboBox cmbPortConfAssoc;
+		
+		private global::Gtk.ComboBox cmbPortConfNSamples;
+		
+		private global::Gtk.ComboBox cmbPortMode;
+		
+		private global::Gtk.ComboBox cmbPortNumber;
+		
+		private global::Gtk.ComboBox cmbPortRange;
+		
+		private global::Gtk.Label lblPortConfAssocPort;
+		
+		private global::Gtk.Label lblPortConfInvert;
+		
+		private global::Gtk.Label lblPortConfMode;
+		
+		private global::Gtk.Label lblPortConfNSamples;
+		
+		private global::Gtk.Label lblPortConfNumber;
+		
+		private global::Gtk.Label lblPortConfRange;
+		
+		private global::Gtk.Label frmPortConfig;
 		
 		private global::Gtk.VBox vbox10;
 		
@@ -110,7 +134,7 @@ namespace maxim_11311
 		
 		private global::Gtk.Label GtkLabel13;
 		
-		private global::Gtk.Label GtkLabel4;
+		private global::Gtk.Label GtkLabel11;
 		
 		private global::Gtk.Label label1;
 		
@@ -211,7 +235,7 @@ namespace maxim_11311
 			this.notebook2 = new global::Gtk.Notebook ();
 			this.notebook2.CanFocus = true;
 			this.notebook2.Name = "notebook2";
-			this.notebook2.CurrentPage = 1;
+			this.notebook2.CurrentPage = 0;
 			// Container child notebook2.Gtk.Notebook+NotebookChild
 			this.frame4 = new global::Gtk.Frame ();
 			this.frame4.Name = "frame4";
@@ -242,6 +266,125 @@ namespace maxim_11311
 			w6.Expand = false;
 			w6.Fill = false;
 			// Container child hbox5.Gtk.Box+BoxChild
+			this.hbox9 = new global::Gtk.HBox ();
+			this.hbox9.Name = "hbox9";
+			this.hbox9.Spacing = 6;
+			this.hbox5.Add (this.hbox9);
+			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.hbox9]));
+			w7.Position = 2;
+			this.vbox9.Add (this.hbox5);
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.hbox5]));
+			w8.Position = 0;
+			w8.Expand = false;
+			w8.Fill = false;
+			// Container child vbox9.Gtk.Box+BoxChild
+			this.hbox6 = new global::Gtk.HBox ();
+			this.hbox6.Name = "hbox6";
+			this.hbox6.Spacing = 6;
+			// Container child hbox6.Gtk.Box+BoxChild
+			this.lblP1 = new global::Gtk.Label ();
+			this.lblP1.Name = "lblP1";
+			this.lblP1.LabelProp = global::Mono.Unix.Catalog.GetString ("Port 1");
+			this.hbox6.Add (this.lblP1);
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.lblP1]));
+			w9.Position = 0;
+			w9.Expand = false;
+			w9.Fill = false;
+			// Container child hbox6.Gtk.Box+BoxChild
+			this.hbox10 = new global::Gtk.HBox ();
+			this.hbox10.Name = "hbox10";
+			this.hbox10.Spacing = 6;
+			this.hbox6.Add (this.hbox10);
+			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.hbox10]));
+			w10.Position = 2;
+			this.vbox9.Add (this.hbox6);
+			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.hbox6]));
+			w11.Position = 1;
+			w11.Expand = false;
+			w11.Fill = false;
+			// Container child vbox9.Gtk.Box+BoxChild
+			this.frame5 = new global::Gtk.Frame ();
+			this.frame5.Name = "frame5";
+			// Container child frame5.Gtk.Container+ContainerChild
+			this.tblPortConf = new global::Gtk.Table (((uint)(2)), ((uint)(7)), false);
+			this.tblPortConf.Name = "tblPortConf";
+			this.tblPortConf.RowSpacing = ((uint)(6));
+			this.tblPortConf.ColumnSpacing = ((uint)(6));
+			this.tblPortConf.BorderWidth = ((uint)(2));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.btnPortConfApply = new global::Gtk.Button ();
+			this.btnPortConfApply.CanFocus = true;
+			this.btnPortConfApply.Name = "btnPortConfApply";
+			this.btnPortConfApply.UseUnderline = true;
+			this.btnPortConfApply.Label = global::Mono.Unix.Catalog.GetString ("Apply");
+			this.tblPortConf.Add (this.btnPortConfApply);
+			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.btnPortConfApply]));
+			w12.TopAttach = ((uint)(1));
+			w12.BottomAttach = ((uint)(2));
+			w12.LeftAttach = ((uint)(6));
+			w12.RightAttach = ((uint)(7));
+			w12.XOptions = ((global::Gtk.AttachOptions)(4));
+			w12.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.cbxPortConfInvert = new global::Gtk.CheckButton ();
+			this.cbxPortConfInvert.CanFocus = true;
+			this.cbxPortConfInvert.Name = "cbxPortConfInvert";
+			this.cbxPortConfInvert.Label = global::Mono.Unix.Catalog.GetString ("Invert");
+			this.cbxPortConfInvert.DrawIndicator = true;
+			this.cbxPortConfInvert.UseUnderline = true;
+			this.tblPortConf.Add (this.cbxPortConfInvert);
+			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.cbxPortConfInvert]));
+			w13.TopAttach = ((uint)(1));
+			w13.BottomAttach = ((uint)(2));
+			w13.LeftAttach = ((uint)(3));
+			w13.RightAttach = ((uint)(4));
+			w13.XOptions = ((global::Gtk.AttachOptions)(4));
+			w13.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.cmbPortConfAssoc = global::Gtk.ComboBox.NewText ();
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("0"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("1"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("2"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("3"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("4"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("5"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("6"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("7"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("8"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("9"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("10"));
+			this.cmbPortConfAssoc.AppendText (global::Mono.Unix.Catalog.GetString ("11"));
+			this.cmbPortConfAssoc.Name = "cmbPortConfAssoc";
+			this.cmbPortConfAssoc.Active = 0;
+			this.tblPortConf.Add (this.cmbPortConfAssoc);
+			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.cmbPortConfAssoc]));
+			w14.TopAttach = ((uint)(1));
+			w14.BottomAttach = ((uint)(2));
+			w14.LeftAttach = ((uint)(5));
+			w14.RightAttach = ((uint)(6));
+			w14.XOptions = ((global::Gtk.AttachOptions)(4));
+			w14.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.cmbPortConfNSamples = global::Gtk.ComboBox.NewText ();
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("1"));
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("2"));
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("4"));
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("8"));
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("16"));
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("32"));
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("64"));
+			this.cmbPortConfNSamples.AppendText (global::Mono.Unix.Catalog.GetString ("128"));
+			this.cmbPortConfNSamples.Name = "cmbPortConfNSamples";
+			this.cmbPortConfNSamples.Active = 0;
+			this.tblPortConf.Add (this.cmbPortConfNSamples);
+			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.cmbPortConfNSamples]));
+			w15.TopAttach = ((uint)(1));
+			w15.BottomAttach = ((uint)(2));
+			w15.LeftAttach = ((uint)(4));
+			w15.RightAttach = ((uint)(5));
+			w15.XOptions = ((global::Gtk.AttachOptions)(4));
+			w15.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
 			this.cmbPortMode = global::Gtk.ComboBox.NewText ();
 			this.cmbPortMode.AppendText (global::Mono.Unix.Catalog.GetString ("High impedance"));
 			this.cmbPortMode.AppendText (global::Mono.Unix.Catalog.GetString ("Digital input, GPI"));
@@ -261,16 +404,37 @@ namespace maxim_11311
 			this.cmbPortMode.AppendText ("");
 			this.cmbPortMode.Name = "cmbPortMode";
 			this.cmbPortMode.Active = 12;
-			this.hbox5.Add (this.cmbPortMode);
-			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.cmbPortMode]));
-			w7.Position = 1;
-			w7.Expand = false;
-			w7.Fill = false;
-			// Container child hbox5.Gtk.Box+BoxChild
-			this.hbox9 = new global::Gtk.HBox ();
-			this.hbox9.Name = "hbox9";
-			this.hbox9.Spacing = 6;
-			// Container child hbox9.Gtk.Box+BoxChild
+			this.tblPortConf.Add (this.cmbPortMode);
+			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.cmbPortMode]));
+			w16.TopAttach = ((uint)(1));
+			w16.BottomAttach = ((uint)(2));
+			w16.LeftAttach = ((uint)(1));
+			w16.RightAttach = ((uint)(2));
+			w16.XOptions = ((global::Gtk.AttachOptions)(4));
+			w16.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.cmbPortNumber = global::Gtk.ComboBox.NewText ();
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("0"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("1"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("2"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("3"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("4"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("5"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("6"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("7"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("8"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("9"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("10"));
+			this.cmbPortNumber.AppendText (global::Mono.Unix.Catalog.GetString ("11"));
+			this.cmbPortNumber.Name = "cmbPortNumber";
+			this.cmbPortNumber.Active = 0;
+			this.tblPortConf.Add (this.cmbPortNumber);
+			global::Gtk.Table.TableChild w17 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.cmbPortNumber]));
+			w17.TopAttach = ((uint)(1));
+			w17.BottomAttach = ((uint)(2));
+			w17.XOptions = ((global::Gtk.AttachOptions)(4));
+			w17.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
 			this.cmbPortRange = global::Gtk.ComboBox.NewText ();
 			this.cmbPortRange.AppendText (global::Mono.Unix.Catalog.GetString ("none"));
 			this.cmbPortRange.AppendText (global::Mono.Unix.Catalog.GetString ("0 .. +10 V"));
@@ -281,95 +445,96 @@ namespace maxim_11311
 			this.cmbPortRange.AppendText (global::Mono.Unix.Catalog.GetString ("0 .. +2.5 V"));
 			this.cmbPortRange.Name = "cmbPortRange";
 			this.cmbPortRange.Active = 0;
-			this.hbox9.Add (this.cmbPortRange);
-			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox9 [this.cmbPortRange]));
-			w8.Position = 0;
-			w8.Expand = false;
-			w8.Fill = false;
-			this.hbox5.Add (this.hbox9);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.hbox9]));
-			w9.Position = 2;
-			this.vbox9.Add (this.hbox5);
-			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.hbox5]));
-			w10.Position = 0;
-			w10.Expand = false;
-			w10.Fill = false;
-			// Container child vbox9.Gtk.Box+BoxChild
-			this.hbox6 = new global::Gtk.HBox ();
-			this.hbox6.Name = "hbox6";
-			this.hbox6.Spacing = 6;
-			// Container child hbox6.Gtk.Box+BoxChild
-			this.lblP1 = new global::Gtk.Label ();
-			this.lblP1.Name = "lblP1";
-			this.lblP1.LabelProp = global::Mono.Unix.Catalog.GetString ("Port 1");
-			this.hbox6.Add (this.lblP1);
-			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.lblP1]));
-			w11.Position = 0;
-			w11.Expand = false;
-			w11.Fill = false;
-			// Container child hbox6.Gtk.Box+BoxChild
-			this.cmbPortMode1 = global::Gtk.ComboBox.NewText ();
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("High impedance"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Digital input, GPI"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Level translator"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Register output, GPO"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Path output, GPO"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("DAC output"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("DAC out, ADC-monitored"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Single ended ADC"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Differential ADC +"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Differential ADC -"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Pseudo differential"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Analog switch GPI"));
-			this.cmbPortMode1.AppendText (global::Mono.Unix.Catalog.GetString ("Analog switch Register"));
-			this.cmbPortMode1.AppendText ("");
-			this.cmbPortMode1.AppendText ("");
-			this.cmbPortMode1.AppendText ("");
-			this.cmbPortMode1.Name = "cmbPortMode1";
-			this.cmbPortMode1.Active = 12;
-			this.hbox6.Add (this.cmbPortMode1);
-			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.cmbPortMode1]));
-			w12.Position = 1;
-			w12.Expand = false;
-			w12.Fill = false;
-			// Container child hbox6.Gtk.Box+BoxChild
-			this.hbox10 = new global::Gtk.HBox ();
-			this.hbox10.Name = "hbox10";
-			this.hbox10.Spacing = 6;
-			// Container child hbox10.Gtk.Box+BoxChild
-			this.cmbPortRange1 = global::Gtk.ComboBox.NewText ();
-			this.cmbPortRange1.AppendText (global::Mono.Unix.Catalog.GetString ("none"));
-			this.cmbPortRange1.AppendText (global::Mono.Unix.Catalog.GetString ("0 .. +10 V"));
-			this.cmbPortRange1.AppendText (global::Mono.Unix.Catalog.GetString ("-5 .. +5 V"));
-			this.cmbPortRange1.AppendText (global::Mono.Unix.Catalog.GetString ("-10 .. 0 V"));
-			this.cmbPortRange1.AppendText (global::Mono.Unix.Catalog.GetString ("0 .. +2.5 V"));
-			this.cmbPortRange1.AppendText (global::Mono.Unix.Catalog.GetString ("res"));
-			this.cmbPortRange1.AppendText (global::Mono.Unix.Catalog.GetString ("0 .. +2.5 V"));
-			this.cmbPortRange1.Name = "cmbPortRange1";
-			this.cmbPortRange1.Active = 0;
-			this.hbox10.Add (this.cmbPortRange1);
-			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.cmbPortRange1]));
-			w13.Position = 0;
-			w13.Expand = false;
-			w13.Fill = false;
-			this.hbox6.Add (this.hbox10);
-			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.hbox10]));
-			w14.Position = 2;
-			this.vbox9.Add (this.hbox6);
-			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.hbox6]));
-			w15.Position = 1;
-			w15.Expand = false;
-			w15.Fill = false;
+			this.tblPortConf.Add (this.cmbPortRange);
+			global::Gtk.Table.TableChild w18 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.cmbPortRange]));
+			w18.TopAttach = ((uint)(1));
+			w18.BottomAttach = ((uint)(2));
+			w18.LeftAttach = ((uint)(2));
+			w18.RightAttach = ((uint)(3));
+			w18.XOptions = ((global::Gtk.AttachOptions)(4));
+			w18.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.lblPortConfAssocPort = new global::Gtk.Label ();
+			this.lblPortConfAssocPort.Name = "lblPortConfAssocPort";
+			this.lblPortConfAssocPort.LabelProp = global::Mono.Unix.Catalog.GetString ("Ass.port");
+			this.tblPortConf.Add (this.lblPortConfAssocPort);
+			global::Gtk.Table.TableChild w19 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.lblPortConfAssocPort]));
+			w19.LeftAttach = ((uint)(5));
+			w19.RightAttach = ((uint)(6));
+			w19.XOptions = ((global::Gtk.AttachOptions)(4));
+			w19.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.lblPortConfInvert = new global::Gtk.Label ();
+			this.lblPortConfInvert.Name = "lblPortConfInvert";
+			this.lblPortConfInvert.LabelProp = global::Mono.Unix.Catalog.GetString ("Invert");
+			this.tblPortConf.Add (this.lblPortConfInvert);
+			global::Gtk.Table.TableChild w20 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.lblPortConfInvert]));
+			w20.LeftAttach = ((uint)(3));
+			w20.RightAttach = ((uint)(4));
+			w20.XOptions = ((global::Gtk.AttachOptions)(4));
+			w20.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.lblPortConfMode = new global::Gtk.Label ();
+			this.lblPortConfMode.Name = "lblPortConfMode";
+			this.lblPortConfMode.LabelProp = global::Mono.Unix.Catalog.GetString ("Configuration");
+			this.tblPortConf.Add (this.lblPortConfMode);
+			global::Gtk.Table.TableChild w21 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.lblPortConfMode]));
+			w21.LeftAttach = ((uint)(1));
+			w21.RightAttach = ((uint)(2));
+			w21.XOptions = ((global::Gtk.AttachOptions)(4));
+			w21.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.lblPortConfNSamples = new global::Gtk.Label ();
+			this.lblPortConfNSamples.Name = "lblPortConfNSamples";
+			this.lblPortConfNSamples.LabelProp = global::Mono.Unix.Catalog.GetString ("#Samples");
+			this.tblPortConf.Add (this.lblPortConfNSamples);
+			global::Gtk.Table.TableChild w22 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.lblPortConfNSamples]));
+			w22.LeftAttach = ((uint)(4));
+			w22.RightAttach = ((uint)(5));
+			w22.XOptions = ((global::Gtk.AttachOptions)(4));
+			w22.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.lblPortConfNumber = new global::Gtk.Label ();
+			this.lblPortConfNumber.Name = "lblPortConfNumber";
+			this.lblPortConfNumber.Ypad = 5;
+			this.lblPortConfNumber.LabelProp = global::Mono.Unix.Catalog.GetString ("Port number");
+			this.tblPortConf.Add (this.lblPortConfNumber);
+			global::Gtk.Table.TableChild w23 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.lblPortConfNumber]));
+			w23.XOptions = ((global::Gtk.AttachOptions)(4));
+			w23.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblPortConf.Gtk.Table+TableChild
+			this.lblPortConfRange = new global::Gtk.Label ();
+			this.lblPortConfRange.Name = "lblPortConfRange";
+			this.lblPortConfRange.LabelProp = global::Mono.Unix.Catalog.GetString ("Range");
+			this.tblPortConf.Add (this.lblPortConfRange);
+			global::Gtk.Table.TableChild w24 = ((global::Gtk.Table.TableChild)(this.tblPortConf [this.lblPortConfRange]));
+			w24.LeftAttach = ((uint)(2));
+			w24.RightAttach = ((uint)(3));
+			w24.XOptions = ((global::Gtk.AttachOptions)(4));
+			w24.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.frame5.Add (this.tblPortConf);
+			this.frmPortConfig = new global::Gtk.Label ();
+			this.frmPortConfig.Name = "frmPortConfig";
+			this.frmPortConfig.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Port configuration</b>");
+			this.frmPortConfig.UseMarkup = true;
+			this.frame5.LabelWidget = this.frmPortConfig;
+			this.vbox9.Add (this.frame5);
+			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.vbox9 [this.frame5]));
+			w26.Position = 2;
+			w26.Expand = false;
+			w26.Fill = false;
 			this.vbox8.Add (this.vbox9);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.vbox9]));
-			w16.Position = 0;
+			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.vbox9]));
+			w27.Position = 0;
+			w27.Expand = false;
+			w27.Fill = false;
 			// Container child vbox8.Gtk.Box+BoxChild
 			this.vbox10 = new global::Gtk.VBox ();
 			this.vbox10.Name = "vbox10";
 			this.vbox10.Spacing = 6;
 			this.vbox8.Add (this.vbox10);
-			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.vbox10]));
-			w17.Position = 1;
+			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.vbox10]));
+			w28.Position = 1;
 			// Container child vbox8.Gtk.Box+BoxChild
 			this.vbox11 = new global::Gtk.VBox ();
 			this.vbox11.Name = "vbox11";
@@ -379,8 +544,8 @@ namespace maxim_11311
 			this.vbox14.Name = "vbox14";
 			this.vbox14.Spacing = 6;
 			this.vbox11.Add (this.vbox14);
-			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox11 [this.vbox14]));
-			w18.Position = 1;
+			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.vbox11 [this.vbox14]));
+			w29.Position = 1;
 			// Container child vbox11.Gtk.Box+BoxChild
 			this.vbox13 = new global::Gtk.VBox ();
 			this.vbox13.Name = "vbox13";
@@ -390,14 +555,14 @@ namespace maxim_11311
 			this.hbox8.Name = "hbox8";
 			this.hbox8.Spacing = 6;
 			this.vbox13.Add (this.hbox8);
-			global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.vbox13 [this.hbox8]));
-			w19.Position = 1;
+			global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.vbox13 [this.hbox8]));
+			w30.Position = 1;
 			this.vbox11.Add (this.vbox13);
-			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.vbox11 [this.vbox13]));
-			w20.Position = 2;
+			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.vbox11 [this.vbox13]));
+			w31.Position = 2;
 			this.vbox8.Add (this.vbox11);
-			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.vbox11]));
-			w21.Position = 2;
+			global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.vbox11]));
+			w32.Position = 2;
 			this.GtkAlignment3.Add (this.vbox8);
 			this.frame4.Add (this.GtkAlignment3);
 			this.GtkLabel19 = new global::Gtk.Label ();
@@ -447,10 +612,10 @@ namespace maxim_11311
 			this.rbnAdcIdleMode.UseUnderline = true;
 			this.rbnAdcIdleMode.Group = new global::GLib.SList (global::System.IntPtr.Zero);
 			this.vbox4.Add (this.rbnAdcIdleMode);
-			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.rbnAdcIdleMode]));
-			w25.Position = 0;
-			w25.Expand = false;
-			w25.Fill = false;
+			global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.rbnAdcIdleMode]));
+			w36.Position = 0;
+			w36.Expand = false;
+			w36.Fill = false;
 			// Container child vbox4.Gtk.Box+BoxChild
 			this.rbnAdcSingleSweep = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Single sweep"));
 			this.rbnAdcSingleSweep.CanFocus = true;
@@ -459,10 +624,10 @@ namespace maxim_11311
 			this.rbnAdcSingleSweep.UseUnderline = true;
 			this.rbnAdcSingleSweep.Group = this.rbnAdcIdleMode.Group;
 			this.vbox4.Add (this.rbnAdcSingleSweep);
-			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.rbnAdcSingleSweep]));
-			w26.Position = 1;
-			w26.Expand = false;
-			w26.Fill = false;
+			global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.rbnAdcSingleSweep]));
+			w37.Position = 1;
+			w37.Expand = false;
+			w37.Fill = false;
 			// Container child vbox4.Gtk.Box+BoxChild
 			this.vbox5 = new global::Gtk.VBox ();
 			this.vbox5.Name = "vbox5";
@@ -475,10 +640,10 @@ namespace maxim_11311
 			this.rbnAdcSingleConv.UseUnderline = true;
 			this.rbnAdcSingleConv.Group = this.rbnAdcIdleMode.Group;
 			this.vbox5.Add (this.rbnAdcSingleConv);
-			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.rbnAdcSingleConv]));
-			w27.Position = 0;
-			w27.Expand = false;
-			w27.Fill = false;
+			global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.rbnAdcSingleConv]));
+			w38.Position = 0;
+			w38.Expand = false;
+			w38.Fill = false;
 			// Container child vbox5.Gtk.Box+BoxChild
 			this.rbnAdcContSweep = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Continiuous sweep"));
 			this.rbnAdcContSweep.CanFocus = true;
@@ -487,15 +652,15 @@ namespace maxim_11311
 			this.rbnAdcContSweep.UseUnderline = true;
 			this.rbnAdcContSweep.Group = this.rbnAdcIdleMode.Group;
 			this.vbox5.Add (this.rbnAdcContSweep);
-			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.rbnAdcContSweep]));
-			w28.Position = 1;
-			w28.Expand = false;
-			w28.Fill = false;
+			global::Gtk.Box.BoxChild w39 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.rbnAdcContSweep]));
+			w39.Position = 1;
+			w39.Expand = false;
+			w39.Fill = false;
 			this.vbox4.Add (this.vbox5);
-			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.vbox5]));
-			w29.Position = 2;
-			w29.Expand = false;
-			w29.Fill = false;
+			global::Gtk.Box.BoxChild w40 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.vbox5]));
+			w40.Position = 2;
+			w40.Expand = false;
+			w40.Fill = false;
 			this.GtkAlignment1.Add (this.vbox4);
 			this.frame2.Add (this.GtkAlignment1);
 			this.lblADCConvMode = new global::Gtk.Label ();
@@ -504,10 +669,10 @@ namespace maxim_11311
 			this.lblADCConvMode.UseMarkup = true;
 			this.frame2.LabelWidget = this.lblADCConvMode;
 			this.hbox3.Add (this.frame2);
-			global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.frame2]));
-			w32.Position = 0;
-			w32.Expand = false;
-			w32.Fill = false;
+			global::Gtk.Box.BoxChild w43 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.frame2]));
+			w43.Position = 0;
+			w43.Expand = false;
+			w43.Fill = false;
 			// Container child hbox3.Gtk.Box+BoxChild
 			this.hbox4 = new global::Gtk.HBox ();
 			this.hbox4.Name = "hbox4";
@@ -531,10 +696,10 @@ namespace maxim_11311
 			this.rbnAdcSpeed200.UseUnderline = true;
 			this.rbnAdcSpeed200.Group = new global::GLib.SList (global::System.IntPtr.Zero);
 			this.vbox6.Add (this.rbnAdcSpeed200);
-			global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.rbnAdcSpeed200]));
-			w33.Position = 0;
-			w33.Expand = false;
-			w33.Fill = false;
+			global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.rbnAdcSpeed200]));
+			w44.Position = 0;
+			w44.Expand = false;
+			w44.Fill = false;
 			// Container child vbox6.Gtk.Box+BoxChild
 			this.rbnAdcSpeed250 = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("250 ksps"));
 			this.rbnAdcSpeed250.CanFocus = true;
@@ -543,10 +708,10 @@ namespace maxim_11311
 			this.rbnAdcSpeed250.UseUnderline = true;
 			this.rbnAdcSpeed250.Group = this.rbnAdcSpeed200.Group;
 			this.vbox6.Add (this.rbnAdcSpeed250);
-			global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.rbnAdcSpeed250]));
-			w34.Position = 1;
-			w34.Expand = false;
-			w34.Fill = false;
+			global::Gtk.Box.BoxChild w45 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.rbnAdcSpeed250]));
+			w45.Position = 1;
+			w45.Expand = false;
+			w45.Fill = false;
 			// Container child vbox6.Gtk.Box+BoxChild
 			this.vbox7 = new global::Gtk.VBox ();
 			this.vbox7.Name = "vbox7";
@@ -559,10 +724,10 @@ namespace maxim_11311
 			this.rbnAdcSpeed333.UseUnderline = true;
 			this.rbnAdcSpeed333.Group = this.rbnAdcSpeed200.Group;
 			this.vbox7.Add (this.rbnAdcSpeed333);
-			global::Gtk.Box.BoxChild w35 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.rbnAdcSpeed333]));
-			w35.Position = 0;
-			w35.Expand = false;
-			w35.Fill = false;
+			global::Gtk.Box.BoxChild w46 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.rbnAdcSpeed333]));
+			w46.Position = 0;
+			w46.Expand = false;
+			w46.Fill = false;
 			// Container child vbox7.Gtk.Box+BoxChild
 			this.rbnAdcSpeed400 = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("400 ksps"));
 			this.rbnAdcSpeed400.CanFocus = true;
@@ -571,15 +736,15 @@ namespace maxim_11311
 			this.rbnAdcSpeed400.UseUnderline = true;
 			this.rbnAdcSpeed400.Group = this.rbnAdcSpeed200.Group;
 			this.vbox7.Add (this.rbnAdcSpeed400);
-			global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.rbnAdcSpeed400]));
-			w36.Position = 1;
-			w36.Expand = false;
-			w36.Fill = false;
+			global::Gtk.Box.BoxChild w47 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.rbnAdcSpeed400]));
+			w47.Position = 1;
+			w47.Expand = false;
+			w47.Fill = false;
 			this.vbox6.Add (this.vbox7);
-			global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.vbox7]));
-			w37.Position = 2;
-			w37.Expand = false;
-			w37.Fill = false;
+			global::Gtk.Box.BoxChild w48 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.vbox7]));
+			w48.Position = 2;
+			w48.Expand = false;
+			w48.Fill = false;
 			this.GtkAlignment2.Add (this.vbox6);
 			this.frame3.Add (this.GtkAlignment2);
 			this.GtkLabel13 = new global::Gtk.Label ();
@@ -588,28 +753,28 @@ namespace maxim_11311
 			this.GtkLabel13.UseMarkup = true;
 			this.frame3.LabelWidget = this.GtkLabel13;
 			this.hbox4.Add (this.frame3);
-			global::Gtk.Box.BoxChild w40 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.frame3]));
-			w40.Position = 0;
-			w40.Expand = false;
-			w40.Fill = false;
+			global::Gtk.Box.BoxChild w51 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.frame3]));
+			w51.Position = 0;
+			w51.Expand = false;
+			w51.Fill = false;
 			this.hbox3.Add (this.hbox4);
-			global::Gtk.Box.BoxChild w41 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.hbox4]));
-			w41.Position = 1;
+			global::Gtk.Box.BoxChild w52 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.hbox4]));
+			w52.Position = 1;
 			this.GtkAlignment.Add (this.hbox3);
 			this.frame1.Add (this.GtkAlignment);
-			this.GtkLabel4 = new global::Gtk.Label ();
-			this.GtkLabel4.Name = "GtkLabel4";
-			this.GtkLabel4.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>ADC settings</b>");
-			this.GtkLabel4.UseMarkup = true;
-			this.frame1.LabelWidget = this.GtkLabel4;
+			this.GtkLabel11 = new global::Gtk.Label ();
+			this.GtkLabel11.Name = "GtkLabel11";
+			this.GtkLabel11.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>ADC settings</b>");
+			this.GtkLabel11.UseMarkup = true;
+			this.frame1.LabelWidget = this.GtkLabel11;
 			this.vbox3.Add (this.frame1);
-			global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.frame1]));
-			w44.Position = 0;
-			w44.Expand = false;
-			w44.Fill = false;
+			global::Gtk.Box.BoxChild w55 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.frame1]));
+			w55.Position = 0;
+			w55.Expand = false;
+			w55.Fill = false;
 			this.notebook2.Add (this.vbox3);
-			global::Gtk.Notebook.NotebookChild w45 = ((global::Gtk.Notebook.NotebookChild)(this.notebook2 [this.vbox3]));
-			w45.Position = 1;
+			global::Gtk.Notebook.NotebookChild w56 = ((global::Gtk.Notebook.NotebookChild)(this.notebook2 [this.vbox3]));
+			w56.Position = 1;
 			// Notebook tab
 			this.label1 = new global::Gtk.Label ();
 			this.label1.Name = "label1";
@@ -632,11 +797,11 @@ namespace maxim_11311
 			this.btnClear.UseUnderline = true;
 			this.btnClear.Label = global::Mono.Unix.Catalog.GetString ("Clear log");
 			this.table1.Add (this.btnClear);
-			global::Gtk.Table.TableChild w46 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnClear]));
-			w46.LeftAttach = ((uint)(2));
-			w46.RightAttach = ((uint)(3));
-			w46.XOptions = ((global::Gtk.AttachOptions)(4));
-			w46.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w57 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnClear]));
+			w57.LeftAttach = ((uint)(2));
+			w57.RightAttach = ((uint)(3));
+			w57.XOptions = ((global::Gtk.AttachOptions)(4));
+			w57.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.btnReadAll = new global::Gtk.Button ();
 			this.btnReadAll.CanFocus = true;
@@ -644,9 +809,9 @@ namespace maxim_11311
 			this.btnReadAll.UseUnderline = true;
 			this.btnReadAll.Label = global::Mono.Unix.Catalog.GetString ("Read all");
 			this.table1.Add (this.btnReadAll);
-			global::Gtk.Table.TableChild w47 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnReadAll]));
-			w47.XOptions = ((global::Gtk.AttachOptions)(4));
-			w47.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w58 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnReadAll]));
+			w58.XOptions = ((global::Gtk.AttachOptions)(4));
+			w58.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.btnReadReg = new global::Gtk.Button ();
 			this.btnReadReg.CanFocus = true;
@@ -654,11 +819,11 @@ namespace maxim_11311
 			this.btnReadReg.UseUnderline = true;
 			this.btnReadReg.Label = global::Mono.Unix.Catalog.GetString ("Read register");
 			this.table1.Add (this.btnReadReg);
-			global::Gtk.Table.TableChild w48 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnReadReg]));
-			w48.TopAttach = ((uint)(1));
-			w48.BottomAttach = ((uint)(2));
-			w48.XOptions = ((global::Gtk.AttachOptions)(4));
-			w48.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w59 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnReadReg]));
+			w59.TopAttach = ((uint)(1));
+			w59.BottomAttach = ((uint)(2));
+			w59.XOptions = ((global::Gtk.AttachOptions)(4));
+			w59.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.btnWriteReg = new global::Gtk.Button ();
 			this.btnWriteReg.CanFocus = true;
@@ -666,22 +831,22 @@ namespace maxim_11311
 			this.btnWriteReg.UseUnderline = true;
 			this.btnWriteReg.Label = global::Mono.Unix.Catalog.GetString ("Write register");
 			this.table1.Add (this.btnWriteReg);
-			global::Gtk.Table.TableChild w49 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnWriteReg]));
-			w49.TopAttach = ((uint)(2));
-			w49.BottomAttach = ((uint)(3));
-			w49.XOptions = ((global::Gtk.AttachOptions)(4));
-			w49.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w60 = ((global::Gtk.Table.TableChild)(this.table1 [this.btnWriteReg]));
+			w60.TopAttach = ((uint)(2));
+			w60.BottomAttach = ((uint)(3));
+			w60.XOptions = ((global::Gtk.AttachOptions)(4));
+			w60.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.lblReadRes = new global::Gtk.Label ();
 			this.lblReadRes.Name = "lblReadRes";
 			this.table1.Add (this.lblReadRes);
-			global::Gtk.Table.TableChild w50 = ((global::Gtk.Table.TableChild)(this.table1 [this.lblReadRes]));
-			w50.TopAttach = ((uint)(1));
-			w50.BottomAttach = ((uint)(2));
-			w50.LeftAttach = ((uint)(2));
-			w50.RightAttach = ((uint)(3));
-			w50.XOptions = ((global::Gtk.AttachOptions)(4));
-			w50.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w61 = ((global::Gtk.Table.TableChild)(this.table1 [this.lblReadRes]));
+			w61.TopAttach = ((uint)(1));
+			w61.BottomAttach = ((uint)(2));
+			w61.LeftAttach = ((uint)(2));
+			w61.RightAttach = ((uint)(3));
+			w61.XOptions = ((global::Gtk.AttachOptions)(4));
+			w61.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.spbReadReg = new global::Gtk.SpinButton (0, 127, 1);
 			this.spbReadReg.CanFocus = true;
@@ -690,13 +855,13 @@ namespace maxim_11311
 			this.spbReadReg.ClimbRate = 1;
 			this.spbReadReg.Numeric = true;
 			this.table1.Add (this.spbReadReg);
-			global::Gtk.Table.TableChild w51 = ((global::Gtk.Table.TableChild)(this.table1 [this.spbReadReg]));
-			w51.TopAttach = ((uint)(1));
-			w51.BottomAttach = ((uint)(2));
-			w51.LeftAttach = ((uint)(1));
-			w51.RightAttach = ((uint)(2));
-			w51.XOptions = ((global::Gtk.AttachOptions)(4));
-			w51.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w62 = ((global::Gtk.Table.TableChild)(this.table1 [this.spbReadReg]));
+			w62.TopAttach = ((uint)(1));
+			w62.BottomAttach = ((uint)(2));
+			w62.LeftAttach = ((uint)(1));
+			w62.RightAttach = ((uint)(2));
+			w62.XOptions = ((global::Gtk.AttachOptions)(4));
+			w62.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.spbWriteReg = new global::Gtk.SpinButton (0, 127, 1);
 			this.spbWriteReg.CanFocus = true;
@@ -705,13 +870,13 @@ namespace maxim_11311
 			this.spbWriteReg.ClimbRate = 1;
 			this.spbWriteReg.Numeric = true;
 			this.table1.Add (this.spbWriteReg);
-			global::Gtk.Table.TableChild w52 = ((global::Gtk.Table.TableChild)(this.table1 [this.spbWriteReg]));
-			w52.TopAttach = ((uint)(2));
-			w52.BottomAttach = ((uint)(3));
-			w52.LeftAttach = ((uint)(1));
-			w52.RightAttach = ((uint)(2));
-			w52.XOptions = ((global::Gtk.AttachOptions)(4));
-			w52.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w63 = ((global::Gtk.Table.TableChild)(this.table1 [this.spbWriteReg]));
+			w63.TopAttach = ((uint)(2));
+			w63.BottomAttach = ((uint)(3));
+			w63.LeftAttach = ((uint)(1));
+			w63.RightAttach = ((uint)(2));
+			w63.XOptions = ((global::Gtk.AttachOptions)(4));
+			w63.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.spbWriteVal = new global::Gtk.SpinButton (0, 65535, 1);
 			this.spbWriteVal.CanFocus = true;
@@ -720,18 +885,18 @@ namespace maxim_11311
 			this.spbWriteVal.ClimbRate = 1;
 			this.spbWriteVal.Numeric = true;
 			this.table1.Add (this.spbWriteVal);
-			global::Gtk.Table.TableChild w53 = ((global::Gtk.Table.TableChild)(this.table1 [this.spbWriteVal]));
-			w53.TopAttach = ((uint)(2));
-			w53.BottomAttach = ((uint)(3));
-			w53.LeftAttach = ((uint)(2));
-			w53.RightAttach = ((uint)(3));
-			w53.XOptions = ((global::Gtk.AttachOptions)(4));
-			w53.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w64 = ((global::Gtk.Table.TableChild)(this.table1 [this.spbWriteVal]));
+			w64.TopAttach = ((uint)(2));
+			w64.BottomAttach = ((uint)(3));
+			w64.LeftAttach = ((uint)(2));
+			w64.RightAttach = ((uint)(3));
+			w64.XOptions = ((global::Gtk.AttachOptions)(4));
+			w64.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.hbox7.Add (this.table1);
-			global::Gtk.Box.BoxChild w54 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.table1]));
-			w54.Position = 0;
-			w54.Expand = false;
-			w54.Fill = false;
+			global::Gtk.Box.BoxChild w65 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.table1]));
+			w65.Position = 0;
+			w65.Expand = false;
+			w65.Fill = false;
 			// Container child hbox7.Gtk.Box+BoxChild
 			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
@@ -742,11 +907,11 @@ namespace maxim_11311
 			this.txvLog.Name = "txvLog";
 			this.GtkScrolledWindow.Add (this.txvLog);
 			this.hbox7.Add (this.GtkScrolledWindow);
-			global::Gtk.Box.BoxChild w56 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.GtkScrolledWindow]));
-			w56.Position = 1;
+			global::Gtk.Box.BoxChild w67 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.GtkScrolledWindow]));
+			w67.Position = 1;
 			this.notebook2.Add (this.hbox7);
-			global::Gtk.Notebook.NotebookChild w57 = ((global::Gtk.Notebook.NotebookChild)(this.notebook2 [this.hbox7]));
-			w57.Position = 2;
+			global::Gtk.Notebook.NotebookChild w68 = ((global::Gtk.Notebook.NotebookChild)(this.notebook2 [this.hbox7]));
+			w68.Position = 2;
 			// Notebook tab
 			this.label5 = new global::Gtk.Label ();
 			this.label5.Name = "label5";
@@ -754,42 +919,49 @@ namespace maxim_11311
 			this.notebook2.SetTabLabel (this.hbox7, this.label5);
 			this.label5.ShowAll ();
 			this.hbox2.Add (this.notebook2);
-			global::Gtk.Box.BoxChild w58 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.notebook2]));
-			w58.Position = 0;
+			global::Gtk.Box.BoxChild w69 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.notebook2]));
+			w69.Position = 0;
 			this.vbox2.Add (this.hbox2);
-			global::Gtk.Box.BoxChild w59 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox2]));
-			w59.Position = 0;
+			global::Gtk.Box.BoxChild w70 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox2]));
+			w70.Position = 0;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.label3 = new global::Gtk.Label ();
 			this.label3.Name = "label3";
 			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("label2");
 			this.vbox2.Add (this.label3);
-			global::Gtk.Box.BoxChild w60 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.label3]));
-			w60.Position = 1;
-			w60.Expand = false;
-			w60.Fill = false;
+			global::Gtk.Box.BoxChild w71 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.label3]));
+			w71.Position = 1;
+			w71.Expand = false;
+			w71.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.statusbar1 = new global::Gtk.Statusbar ();
 			this.statusbar1.Name = "statusbar1";
 			this.statusbar1.Spacing = 6;
 			this.vbox2.Add (this.statusbar1);
-			global::Gtk.Box.BoxChild w61 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar1]));
-			w61.Position = 2;
-			w61.Expand = false;
-			w61.Fill = false;
+			global::Gtk.Box.BoxChild w72 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.statusbar1]));
+			w72.Position = 2;
+			w72.Expand = false;
+			w72.Fill = false;
 			this.vbox1.Add (this.vbox2);
-			global::Gtk.Box.BoxChild w62 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.vbox2]));
-			w62.Position = 2;
+			global::Gtk.Box.BoxChild w73 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.vbox2]));
+			w73.Position = 2;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 636;
-			this.DefaultHeight = 594;
+			this.DefaultWidth = 768;
+			this.DefaultHeight = 610;
 			this.Show ();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 			this.tbnQuit.Clicked += new global::System.EventHandler (this.OnTbnQuitClicked);
 			this.tbnConnect.Toggled += new global::System.EventHandler (this.OnTbnConnectToggled);
+			this.cmbPortNumber.Changed += new global::System.EventHandler (this.OnCmbPortNumberChanged);
+			this.cmbPortMode.Changed += new global::System.EventHandler (this.OnCmbPortModeChanged);
+			this.btnPortConfApply.Clicked += new global::System.EventHandler (this.OnBtnPortConfApplyClicked);
+			this.rbnAdcSpeed200.Activated += new global::System.EventHandler (this.OnRbnAdcSpeedActivated);
+			this.rbnAdcSpeed250.Activated += new global::System.EventHandler (this.OnRbnAdcSpeedActivated);
+			this.rbnAdcSpeed333.Activated += new global::System.EventHandler (this.OnRbnAdcSpeedActivated);
+			this.rbnAdcSpeed400.Activated += new global::System.EventHandler (this.OnRbnAdcSpeedActivated);
 			this.spbReadReg.ValueChanged += new global::System.EventHandler (this.OnSpbReadRegValueChanged);
 			this.btnWriteReg.Clicked += new global::System.EventHandler (this.OnBtnWriteRegClicked);
 			this.btnReadReg.Clicked += new global::System.EventHandler (this.OnBtnReadRegClicked);
