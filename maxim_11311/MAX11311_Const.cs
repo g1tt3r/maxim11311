@@ -31,19 +31,28 @@ namespace maxim_11311
 		public const int ERRCMD_CONVERT = -4;
 
 
-		public const byte PINMODE_0_HIGHZ = 0;
-		public const byte PINMODE_1_GPI   = 1;
-		public const byte PINMODE_2_LVTR  = 2;
-		public const byte PINMODE_3_GPO  = 3;
-		public const byte PINMODE_4_UNILVTR  = 4;
-		public const byte PINMODE_5_DAC  = 5;
-		public const byte PINMODE_6_DACwADC  = 6;
-		public const byte PINMODE_7_ADC  = 7;
-		public const byte  PINMODE_8_DIFFADCP  = 8;
-		public const byte PINMODE_9_DIFFADCN  = 9;
-		public const byte PINMODE_10_DACNAIN  = 10;
-		public const byte PINMODE_11_ANSW = 11;
-		public const byte PINMODE_12_AIAO = 12;
+		public const int PINMODE_0_HIGHZ = 0;
+		public const int PINMODE_1_GPI   = 1;
+		public const int PINMODE_2_LVTR  = 2;
+		public const int PINMODE_3_GPO  = 3;
+		public const int PINMODE_4_UNILVTR  = 4;
+		public const int PINMODE_5_DAC  = 5;
+		public const int PINMODE_6_DACwADC  = 6;
+		public const int PINMODE_7_ADC  = 7;
+		public const int PINMODE_8_DIFFADCP  = 8;
+		public const int PINMODE_9_DIFFADCN  = 9;
+		public const int PINMODE_10_DACNAIN  = 10;
+		public const int PINMODE_11_ANSW = 11;
+		public const int PINMODE_12_AIAO = 12;
+
+		public const int RANGEMODE_NONE   = 0;
+		public const int RANGEMODE_0_10V  = 1;
+		public const int RANGEMODE_N5_5V  = 2;
+		public const int RANGEMODE_N10_0V = 3;
+		public const int RANGEMODE_0_2V5  = 4;
+		public const int RANGEMODE_RESVD5 = 5;
+		public const int RANGEMODE_0_2V5P = 6;
+		public const int RANGEMODE_RESVD7 = 7;
 
 		#region MAX11300 device driver (SPI interface)
 
@@ -155,6 +164,21 @@ namespace maxim_11311
 		/* ADC data register for PIXI port 17                   R               */    public const byte MAX11300_ADC_DATA_PORT_17           = 0x51;
 		/* ADC data register for PIXI port 18                   R               */    public const byte MAX11300_ADC_DATA_PORT_18           = 0x52;
 		/* ADC data register for PIXI port 19                   R               */    public const byte MAX11300_ADC_DATA_PORT_19           = 0x53;
+
+		/* ADC data register for PIXI port 2                    R               */    public const byte MAX11311_ADC_DATA_PORT_00           = 0x42;
+		/* ADC data register for PIXI port 3                    R               */    public const byte MAX11311_ADC_DATA_PORT_01           = 0x43;
+		/* ADC data register for PIXI port 4                    R               */    public const byte MAX11311_ADC_DATA_PORT_02           = 0x44;
+		/* ADC data register for PIXI port 5                    R               */    public const byte MAX11311_ADC_DATA_PORT_03           = 0x45;
+		/* ADC data register for PIXI port 6                    R               */    public const byte MAX11311_ADC_DATA_PORT_04           = 0x46;
+		/* ADC data register for PIXI port 7                    R               */    public const byte MAX11311_ADC_DATA_PORT_05           = 0x47;
+		/* ADC data register for PIXI port 8                    R               */    public const byte MAX11311_ADC_DATA_PORT_06           = 0x4b;
+		/* ADC data register for PIXI port 9                    R               */    public const byte MAX11311_ADC_DATA_PORT_07           = 0x4c;
+		/* ADC data register for PIXI port 10                   R               */    public const byte MAX11311_ADC_DATA_PORT_08           = 0x4d;
+		/* ADC data register for PIXI port 11                   R               */    public const byte MAX11311_ADC_DATA_PORT_09           = 0x4e;
+		/* ADC data register for PIXI port 12                   R               */    public const byte MAX11311_ADC_DATA_PORT_10           = 0x4f;
+		/* ADC data register for PIXI port 13                   R               */    public const byte MAX11311_ADC_DATA_PORT_11           = 0x50;
+
+
 		/*                                                                      */    //                                                   = 0x54;
 		/*                                                                      */    //                                                   = 0x55;
 		/*                                                                      */    //                                                   = 0x56;
@@ -187,6 +211,19 @@ namespace maxim_11311
 		/* DAC data register for PIXI port 17                   R/W             */    public const byte MAX11300_DAC_DATA_PORT_17           = 0x71;
 		/* DAC data register for PIXI port 18                   R/W             */    public const byte MAX11300_DAC_DATA_PORT_18           = 0x72;
 		/* DAC data register for PIXI port 19                   R/W             */    public const byte MAX11300_DAC_DATA_PORT_19           = 0x73;
+
+		/* DAC data register for PIXI port 0                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_00           = 0x62;
+		/* DAC data register for PIXI port 1                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_01           = 0x63;
+		/* DAC data register for PIXI port 2                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_02           = 0x64;
+		/* DAC data register for PIXI port 3                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_03           = 0x65;
+		/* DAC data register for PIXI port 4                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_04           = 0x66;
+		/* DAC data register for PIXI port 5                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_05           = 0x67;
+		/* DAC data register for PIXI port 6                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_06           = 0x6b;
+		/* DAC data register for PIXI port 7                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_07           = 0x6c;
+		/* DAC data register for PIXI port 8                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_08           = 0x6d;
+		/* DAC data register for PIXI port 9                    R/W             */    public const byte MAX11311_DAC_DATA_PORT_09           = 0x6e;
+		/* DAC data register for PIXI port 10                   R/W             */    public const byte MAX11311_DAC_DATA_PORT_10           = 0x6f;
+		/* DAC data register for PIXI port 11                   R/W             */    public const byte MAX11311_DAC_DATA_PORT_11           = 0x70;
 		/*                                                                      */    //                                                   = 0x74;
 		/*                                                                      */    //                                                   = 0x75;
 		/*                                                                      */    //                                                   = 0x76;

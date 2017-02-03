@@ -70,6 +70,7 @@
     <Compile Include="MAX11311.cs" />
     <Compile Include="MAX11311_Const.cs" />
     <Compile Include="gtk-gui\maxim_11311.MainWindow.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
